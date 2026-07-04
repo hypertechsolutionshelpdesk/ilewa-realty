@@ -1,0 +1,48 @@
+h1 {
+  font: 700 clamp(2.4rem, 5.5vw + 1rem, 5.5rem)/1.08 var(--font-display);
+  letter-spacing: -0.02em;
+  color: var(--clr-text);
+}
+
+h2 {
+  font: 600 clamp(1.8rem, 3.5vw + 0.5rem, 3.2rem)/1.18 var(--font-heading);
+  color: var(--clr-text);
+}
+
+h3 {
+  font: 600 clamp(1.25rem, 2vw + 0.3rem, 2rem)/1.28 var(--font-heading);
+  color: var(--clr-text);
+}
+
+h4 {
+  font: 500 clamp(1.05rem, 1.5vw, 1.5rem)/1.4 var(--font-body);
+  color: var(--clr-text);
+}
+
+p {
+  font: 400 clamp(0.9rem, 1.2vw + 0.1rem, 1.125rem)/1.75 var(--font-body);
+  color: var(--clr-text-body);
+}
+
+.label-text {
+  font: 600 0.75rem/1 var(--font-body);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+}
+
+.display-xl {
+  font: 700 clamp(3.5rem, 8vw + 1rem, 9rem)/0.95 var(--font-display);
+  letter-spacing: -0.03em;
+  color: var(--clr-text);
+}
+
+.subtitle {
+  font: 400 clamp(1.05rem, 1.8vw, 1.5rem)/1.6 var(--font-body);
+  color: var(--clr-text-muted);
+}
+
+.small-text {
+  font-size: 0.875rem;
+  color: var(--clr-text-muted);
+}

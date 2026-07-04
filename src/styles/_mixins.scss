@@ -1,0 +1,75 @@
+// Mobile-first breakpoints
+$bp: (
+  'xs':   320px,
+  'sm':   480px,
+  'md':   768px,
+  'lg':   1024px,
+  'xl':   1280px,
+  '2xl':  1536px,
+  '4k':   2560px,
+);
+
+@mixin up($key) {
+  @media screen and (min-width: map-get($bp, $key)) { @content; }
+}
+
+@mixin down($key) {
+  @media screen and (max-width: calc(#{map-get($bp, $key)} - 1px)) { @content; }
+}
+
+@mixin between($lower, $upper) {
+  @media screen and (min-width: map-get($bp, $lower))
+                 and (max-width: calc(#{map-get($bp, $upper)} - 1px)) { @content; }
+}
+
+@mixin landscape {
+  @media screen and (orientation: landscape) { @content; }
+}
+
+@mixin portrait {
+  @media screen and (orientation: portrait) { @content; }
+}
+
+@mixin touch {
+  @media (hover: none) and (pointer: coarse) { @content; }
+}
+
+@mixin retina {
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { @content; }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin smooth-scroll {
+  scroll-behavior: smooth;
+}

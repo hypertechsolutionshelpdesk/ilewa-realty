@@ -1,0 +1,31 @@
+{
+  "hash": "48decf25",
+  "configHash": "0278e987",
+  "lockfileHash": "313aa0e5",
+  "browserHash": "9f3df9b4",
+  "optimized": {
+    "react": {
+      "src": "../../node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "2c0f590a",
+      "needsInterop": true
+    },
+    "react-dom/client": {
+      "src": "../../node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "98d4a50b",
+      "needsInterop": true
+    },
+    "react-helmet-async": {
+      "src": "../../node_modules/react-helmet-async/lib/index.esm.js",
+      "file": "react-helmet-async.js",
+      "fileHash": "e436df74",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PVGRSWEA": {
+      "file": "chunk-PVGRSWEA.js"
+    }
+  }
+}
