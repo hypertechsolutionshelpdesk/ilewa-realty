@@ -19,12 +19,18 @@ export default defineConfig({
     target: 'es2015',
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor':  ['react', 'react-dom'],
-          'router':        ['react-router-dom'],
-          'motion':        ['framer-motion'],
-          'swiper':        ['swiper'],
-          'icons':         ['react-icons'],
+        manualChunks: (id) => {
+          if (id.includes('node_modules/react')) {
+            return 'react-vendor';
+          } else if (id.includes('node_modules/react-router-dom')) {
+            return 'router';
+          } else if (id.includes('node_modules/framer-motion')) {
+            return 'motion';
+          } else if (id.includes('node_modules/swiper')) {
+            return 'swiper';
+          } else if (id.includes('node_modules/react-icons')) {
+            return 'icons';
+          }
         }
       }
     },

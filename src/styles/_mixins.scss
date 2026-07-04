@@ -1,3 +1,5 @@
+@use "sass:map";
+
 // Mobile-first breakpoints
 $bp: (
   'xs':   320px,
@@ -10,16 +12,16 @@ $bp: (
 );
 
 @mixin up($key) {
-  @media screen and (min-width: map-get($bp, $key)) { @content; }
+  @media screen and (min-width: map.get($bp, $key)) { @content; }
 }
 
 @mixin down($key) {
-  @media screen and (max-width: calc(#{map-get($bp, $key)} - 1px)) { @content; }
+  @media screen and (max-width: calc(#{map.get($bp, $key)} - 1px)) { @content; }
 }
 
 @mixin between($lower, $upper) {
-  @media screen and (min-width: map-get($bp, $lower))
-                 and (max-width: calc(#{map-get($bp, $upper)} - 1px)) { @content; }
+  @media screen and (min-width: map.get($bp, $lower))
+                 and (max-width: calc(#{map.get($bp, $upper)} - 1px)) { @content; }
 }
 
 @mixin landscape {
